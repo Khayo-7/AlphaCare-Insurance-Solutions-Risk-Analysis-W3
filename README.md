@@ -1,4 +1,4 @@
-# 10Academy-Kifiya-Week-2
+# 10Academy-Kifiya-Week-3
 
 # AlphaCare Risk Analysis Project
 
@@ -6,10 +6,9 @@ A project for analyzing insurance claim data to optimize marketing strategies.
 
 ## Overview
 
-The **AlphaCare Risk Analysis Project** aims to analyze insurance-related data to uncover patterns, trends, and insights that drive better decision-making. By understanding key factors influencing claims and premiums, this analysis helps refine risk assessment models and optimize insurance policies.
+The **AlphaCare Risk Analysis Project** aims to analyze insurance-related data to uncover patterns, trends, and insights that drive better decision-making. By understanding key factors influencing claims and premiums, this analysis helps refine risk assessment models and optimize insurance policies. This report explores a large dataset of insured vehicles to identify risk patterns, address data quality issues, and gain insights for predictive modeling. The primary focus is on uncovering relationships between vehicle attributes and claims while ensuring data quality and integrity.
 
 This project adopts a **modular approach**, organizing functionalities into reusable script files for efficient and scalable data exploration and analysis.
-
 
 ---
 ## Introduction
@@ -175,10 +174,30 @@ The exploratory data analysis (EDA) focused on assessing the dataset's quality, 
 
 ## Data Engineering & Workflow
 
+## Data Engineering & Workflow
+
+### Modular Development
+
+A structured scripts directory facilitates reusable analytics:
+
+```
+/notebooks
+├── risk_analysis_EDA.ipynb     # EDA
+/scripts
+├── data_loaders.py             # Dataset I/O
+├── data_cleaning.py            # Dataset cleaning
+├── eda_utils.py                # Exploratory tools
+├── visualization.py            # Plotting utilities
+```
+
 ### Version Control with DVC & Git
+
 DVC integrates seamlessly with Git, enabling efficient dataset versioning.
 
-Example command log:
+- Datasets stored in `.dvc/cache/`.
+- Git tracks metadata changes.
+
+Example log:
 ```bash
 $ git log --oneline --graph
 052c56b Track dataset using DVC
